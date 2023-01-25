@@ -85,7 +85,7 @@ section.side-bar {
 }
 
 
-.menu-item {
+.menu-item > a {
     padding-bottom: 1rem;
     display: flex;
     gap: 1.5rem;

@@ -1,5 +1,48 @@
 let menuItems = document.querySelector(".side-bar-menus");
 
+let supportItems = document.querySelector(".side-bar-support");
+
+window.addEventListener("hashchange", changeClickedColor2);
+
+
+/* 
+    Much cleaner function with a for of loop instead of repeating 
+    if else loops 8 times
+*/
+function changeClickedColor2(event) {
+    for (const child of menuItems.children) {
+        // console.log(child.classList);
+        const itemLink = child.classList[1];
+        // console.log(itemLink);
+
+        if (window.location.href.indexOf(`${itemLink}`) !== -1) {
+            child.classList.add("side-bar-clicked");
+        } else {
+            child.classList.remove("side-bar-clicked");
+        }
+    }
+
+    for (const child of supportItems.children) {
+        // console.log(child.classList);
+        const itemLink = child.classList[1];
+        // console.log(itemLink);
+
+        if (window.location.href.indexOf(`${itemLink}`) !== -1) {
+            child.classList.add("side-bar-clicked");
+        } else {
+            child.classList.remove("side-bar-clicked");
+        }
+    }
+}
+
+
+/*  change link colour on hashchange
+    link: https://stackoverflow.com/questions/6390341/how-to-detect-if-url-has-changed-after-hash-in-javascript
+*/
+
+/* The changeClickedColor2 does this much cleaner and with less code */
+/*
+
 let home = document.querySelector(".home");
 
 let profile = document.querySelector(".profile");
@@ -17,11 +60,6 @@ let settings = document.querySelector(".settings");
 let support = document.querySelector(".support");
 
 let privacy = document.querySelector(".privacy");
-
-
-/*  change link colour on hashchange
-    link: https://stackoverflow.com/questions/6390341/how-to-detect-if-url-has-changed-after-hash-in-javascript
-*/
 
 window.addEventListener("hashchange", changeClickedColor);
 
@@ -81,3 +119,5 @@ function changeClickedColor(event) {
     }
 
 }
+
+*/

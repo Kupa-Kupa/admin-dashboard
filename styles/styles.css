@@ -17,11 +17,27 @@ body {
     font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: minmax(300px, 1fr) 4fr;
+    grid-template-rows: 1fr 3fr;
 }
+
+
+
+/*--- HEADER ---*/
 
 header {
     background-color: var(--header-background-color);
-    padding: 1rem;
+    padding: 1rem 3rem;
+    display: grid;
+    gap: 1rem;
+}
+
+/* TOP HEADER */
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
 }
 
 #search-form {
@@ -35,7 +51,7 @@ input[type="search"] {
     font-size: 1.2rem;
     line-height: 1.4rem;
     padding: 0.3rem 0.75rem;
-    min-width: 500px;
+    width: min(30vw, 700px);
     border-radius: 15px;
     border: none;
     background-color: var(--content-background-color);
@@ -59,8 +75,54 @@ input[type="search"]:focus {
     cursor: pointer;
 }
 
+.top-header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* BOTTOM HEADER */
+
+.bottom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.bottom-header-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bottom-header-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-button {
+    width: 100px;
+    background-color: var(--side-bar-background-color);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    background-color: var(--content-background-color);
+}
 
 
+
+/*--- SIDE BAR ---*/
 
 section.side-bar {
     background-color: var(--side-bar-background-color);
@@ -74,7 +136,6 @@ section.side-bar {
     align-content: start;
 }
 
-
 .side-bar-heading {
     font-size: 1.5rem;
     font-weight: bold;
@@ -83,7 +144,6 @@ section.side-bar {
     gap: 0.75rem;
     align-items: center;
 }
-
 
 .menu-item > a {
     padding-bottom: 1rem;
@@ -112,12 +172,7 @@ section.side-bar {
 
 
 
-
-
-
-
-
-
+/*--- CONTENT ---*/
 
 section.content {
     background-color: var(--content-background-color);

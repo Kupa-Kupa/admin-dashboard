@@ -2,7 +2,7 @@
 
 https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard
 
-[Live View](#) - #
+[Live View](https://kupa-kupa.github.io/admin-dashboard/) - https://kupa-kupa.github.io/admin-dashboard/
 
 
 ## Learnt About:
